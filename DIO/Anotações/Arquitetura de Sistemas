@@ -1,0 +1,76 @@
+1. Vantagens e desenvolvimentos de Web Services
+
+WSDL - Web Services Description Language
+
+XSD - XML Schema Definition
+- Documentação sobre como deve ser montado o SOAP Message.
+- schema no formato XML usado para definir a estrutura de dados que será validada no XML.
+
+REST (Representational State Transfer)
+- Como o objeto está quando é realizada a chamada.
+- Rest é um estilo de arquitetura de software, design de arquitetura para serviços WEB.
+- Pode trabalhar com XML, JSON e outros.
+
+< Vantagens />: 
+- Integrações entre aplicações e entre cliente e servidor em páginas web e app.
+- Métodos HTTP para definir a operação que está sendo efetuada.
+- Arquitetura de fácil compreensão.
+
+< Estrutura REST / >
+O cliente faz uma requisição HTTP ao servidor e este servidor retorna um código de operação
+e também uma mensagem.
+
+API (Application Programming Interface)
+- Quando uma aplicação disponibiliza um serviço web.
+- São um conjunto de rotinas documentados e disponibilizados para outras aplicações consumir
+as suas funcionalidades.
+- Amplamente utilizado com serviços WEB.
+
+
+Principais Métodos HTTP
+- GET - representação de um recurso
+- POST - criação de um recurso
+- DELETE - exclusão de um recurso
+- PUT - atualização de um recurso
+
+JSON (Javascript Object Notation)
+- Formatação leve
+- Estrtura de chave, valor e listas ordenadas
+- Um dos formatos mais populares e mais utilizados para troca de msg de sistemas
+
+Código de Estado (HTTP)
+- 1xx - Informativo (recebido)
+- 2xx - Sucesso (recebido e processado com sucesso)
+- 3xx - Redirecionamento
+- 4xx - Erro do cliente
+- 5xx - Erro do Servidor
+
+Um índice é:
+Uma nova tabela físico-memória, ordenada da esquerda para a direita, de uma ou mais colunas da tabela.
+
+O comando minus entre duas instruções de DQL é equivalente a qual operação relacional?
+A subtração do segundo conjunto do primeiro conjunto de informações.
+
+O que é Abstração de Dados?
+A maneira como são convertidos de um meio físico para uma visão simplificada para o usuário.
+
+Qual afirmação é correta para DDL?
+É responsável pela alteração do dicionário de dados.
+
+O que é uma primary key?
+Uma regra que determina que o valor do registro é único dentro de todo o conjunto de dados.
+
+O que é um SGDB?
+Um sistema que gerencia banco de dados.
+
+Qual alternativa está incorreta?
+Dados são secundários em um sistema ou exploração da informação.
+
+Qual afirmação não está correta?
+Banco de dados relacionais são idênticos ao modelo flat.
+
+Qual alternativa não faz parte do conceito ACID?
+Continuidade.
+
+Quanto ao DER podemos afirmar que:
+Nenhuma está correta.
