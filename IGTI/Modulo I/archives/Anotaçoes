@@ -1,0 +1,18 @@
+<! ES6+ !>
+
+- Podemos utiliza-lo utilizando transpiladores (Babel, TypeScript).
+
+- var: escopo amplo
+- let: escopo reduzido
+- const: garantir imutabilidade -> Não se aplica a vetores e a objetos
+
+- Arrow Functions : possui uma sintaxe mais declarativa e funcional
+const makeBeer = function beerFun(qty) {
+  return 'Beer'.repeat(qty)
+}
+
+const makeWine = (qty) => 'Wine'.repeat(qty)
+
+- Template Literals 
+
+- Default parameters
