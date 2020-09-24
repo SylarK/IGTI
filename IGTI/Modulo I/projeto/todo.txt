@@ -1,0 +1,16 @@
+<!-----               TO DO                      -->
+
+[x] Realizar a criação / estilização de acordo com o vídeo proposto
+[x] Não esquece de montar dois paineis
+(esquerda -> listar usuários filtrados , 
+direita -> calcular e mostrar estatísticas)
+[x] Implementar materialize
+[x] Obter os dados de https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo 
+[x] Guardar os dados em um array para realizar as consultas posteriormente
+[] Permitir a filtragem através de um input com interação com usuário 
+[] Desbloquear para o usuário filtrar os dados quando ele digitar ao menos um char
+[] O usuário poderá tanto clicar enter quanto clicar no btn
+[] 
+[] 
+[] 
+[]
