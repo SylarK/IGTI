@@ -1,27 +1,56 @@
 const inputUsername = document.querySelector('#username');
 const button = document.querySelector('form button');
 const showUsers = document.querySelector('#showUsers');
+const showData = document.querySelector('#dataUsers');
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
 let username = null;
 let dataUsers = null;
 
 let countMasc = null;
 let countFem = null;
-let sumIdades = null;
+let sumIdades = [];
 let medIdades = null;
 
 let allUsers = [];
 let filteredUsers = [];
 
+let userHTML = '';
+
 let teste = [
-  { nome: 'Jean', picture: 'imagem', age: '25 anos' },
-  { nome: 'Katniss', picture: 'imagem', age: '25 anos' },
-  { nome: 'Sledge', picture: 'imagem', age: '25 anos' },
-  { nome: 'Yeshua', picture: 'imagem', age: '25 anos' },
+  {
+    nome: 'Jean',
+    picture:
+      'https://boostchiropractic.co.nz/wp-content/uploads/2016/09/default-user-img.jpg',
+    age: 25,
+    gender: 'Male',
+  },
+  {
+    nome: 'Katniss',
+    picture:
+      'https://boostchiropractic.co.nz/wp-content/uploads/2016/09/default-user-img.jpg',
+    age: 25,
+    gender: 'Female',
+  },
+  {
+    nome: 'Sledge',
+    picture:
+      'https://boostchiropractic.co.nz/wp-content/uploads/2016/09/default-user-img.jpg',
+    age: 25,
+    gender: 'Male',
+  },
+  {
+    nome: 'Yeshua',
+    picture:
+      'https://boostchiropractic.co.nz/wp-content/uploads/2016/09/default-user-img.jpg',
+    age: 25,
+    gender: 'Male',
+  },
 ];
 
 window.addEventListener('load', () => {
-  //fetchUsers();
+  fetchUsers();
   typing();
   listenForm();
 });
@@ -34,7 +63,7 @@ async function fetchUsers() {
   allUsers = json.results.map((user) => {
     const { name, picture, dob, gender } = user;
     return {
-      name,
+      name: name.first,
       picture,
       dob: dob.age,
       gender,
@@ -56,8 +85,11 @@ function typing() {
 
 function listenForm() {
   function searchUser() {
+    userHTML = '';
     username = inputUsername.value;
-    filteredUsers = [filterUsers(teste, username)];
+    //let allUsersArray = Object.keys(allUsers).map((i) => allUsers[i]);
+    //console.log(allUsersArray);
+    filteredUsers = [filterUsers(allUsers, username)];
     render();
   }
 
@@ -69,28 +101,54 @@ function listenForm() {
 }
 
 function render() {
-  console.log(filteredUsers);
-  filteredUsers.forEach((user) => {
-    console.log(user);
-    console.log(user.nome);
-  });
-  /* filteredUsers.foreach((user) => {
-    const { nome, picture, age } = user;
+  function renderData() {
+    medIdades = sumIdades.reduce(reducer) / sumIdades.length;
 
-    const userInnerHTML = `
-    <div class='row'>
-    <span class='img-user'>${picture}</span>
-    <span class='name-user'>${nome}</span>
-    <span class='age'>${age}</span>
-    </div>
-    
+    dataUsers = `
+    <h6>Estatísticas</h6>
+    <p>Sexo masculino: ${countMasc === null ? 0 : countMasc}</p>
+    <p>Sexo feminino: ${countFem === null ? 0 : countFem}</p>
+    <p>Soma das idades:${sumIdades.reduce(reducer)}</p>
+    <p>Média das idades:${medIdades}</p>
     `;
+
+    showData.innerHTML = dataUsers;
+
+    countMasc = null;
+    countFem = null;
+    sumIdades = [];
+    medIdades = null;
+  }
+
+  filteredUsers.forEach((user) => {
+    user.forEach((res) => {
+      const { nome, picture, age, gender } = res;
+
+      if (gender === 'Male') {
+        countMasc++;
+      } else {
+        countFem++;
+      }
+
+      sumIdades.push(age);
+
+      const userInnerHTML = `
+      <div class='row'>
+      <span class='img-user'><img src='${picture}' alt='user img'></span>
+      <span class='name-user'>${nome}, <span class='age'>${age} anos</span></span>
+      </div>
+      
+      `;
+
+      userHTML += userInnerHTML;
+    });
+    showUsers.innerHTML = userHTML;
+    renderData();
   });
-  console.log(userInnerHTML); */
 }
 
 function filterUsers(arr, query) {
   return arr.filter(
-    (el) => el.nome.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    (el) => el.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
 }

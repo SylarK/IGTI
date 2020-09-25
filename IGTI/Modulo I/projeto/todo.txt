@@ -7,10 +7,10 @@ direita -> calcular e mostrar estatísticas)
 [x] Implementar materialize
 [x] Obter os dados de https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo 
 [x] Guardar os dados em um array para realizar as consultas posteriormente
-[] Permitir a filtragem através de um input com interação com usuário 
-[] Desbloquear para o usuário filtrar os dados quando ele digitar ao menos um char
-[] O usuário poderá tanto clicar enter quanto clicar no btn
-[] 
+[x] Permitir a filtragem através de um input com interação com usuário 
+[x] Desbloquear para o usuário filtrar os dados quando ele digitar ao menos um char
+[x] O usuário poderá tanto clicar enter quanto clicar no btn
+[] Estatísticas (Sexo masculino, Sexo Feminino, Soma das Idades, Média das idades)
 [] 
 [] 
 []
