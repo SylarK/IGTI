@@ -91,6 +91,7 @@ function listenForm() {
     //console.log(allUsersArray);
     filteredUsers = [filterUsers(allUsers, username)];
     render();
+    console.log(filteredUsers[0]);
   }
 
   document.querySelector('form').addEventListener('submit', (e) => {
@@ -108,8 +109,8 @@ function render() {
     <h6>Estatísticas</h6>
     <p>Sexo masculino: ${countMasc === null ? 0 : countMasc}</p>
     <p>Sexo feminino: ${countFem === null ? 0 : countFem}</p>
-    <p>Soma das idades:${sumIdades.reduce(reducer)}</p>
-    <p>Média das idades:${medIdades}</p>
+    <p>Soma das idades: ${sumIdades.reduce(reducer)}</p>
+    <p>Média das idades: ${Math.round(medIdades)}</p>
     `;
 
     showData.innerHTML = dataUsers;
@@ -118,24 +119,24 @@ function render() {
     countFem = null;
     sumIdades = [];
     medIdades = null;
-  }
+  } /** end renderData */
 
   filteredUsers.forEach((user) => {
     user.forEach((res) => {
-      const { nome, picture, age, gender } = res;
+      const { name, picture, dob, gender } = res;
 
-      if (gender === 'Male') {
+      if (gender === 'male') {
         countMasc++;
       } else {
         countFem++;
       }
 
-      sumIdades.push(age);
+      sumIdades.push(dob);
 
       const userInnerHTML = `
       <div class='row'>
-      <span class='img-user'><img src='${picture}' alt='user img'></span>
-      <span class='name-user'>${nome}, <span class='age'>${age} anos</span></span>
+      <span class='img-user'><img src='${picture.large}' alt='user img'></span>
+      <span class='name-user'>${name}, <span class='age'>${dob} anos</span></span>
       </div>
       
       `;
@@ -148,6 +149,7 @@ function render() {
 }
 
 function filterUsers(arr, query) {
+  console.log('filterUser');
   return arr.filter(
     (el) => el.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
