@@ -1,0 +1,51 @@
+<!---- Cores - UI Primárias ---->
+* Paleta primária : 
+Azul Primária - Laranja Primário - Cinza Primário
+
+* Paleta secundária: 
+Verde - Amarelo/Mostarda - Vermelho - Laranja - Cinza 
+(Cores de feedback)
+
+<!---- Tipografias ----->
+Tipos básicos: Serifadas, sem serifa, cursivas, decorativas.
+Serifadas : Seriedade / Tradicionalidade (pequenos traços ou prolongamentos no final de suas letras).
+Sans-serifas: Não tem linhas extras (+ arredondadas). São mais modernas e dinâmicas.
+Cursivas : Abrange manuscritas, caligráficas. Elegantes / Descontraídas / Divertido / Luxo
+Decorativas: Chamar a atenção. Usada em pequenas doses.
+
+<!---- Iconografia ------>
+- Mantenha os ícones simples (simplifique o máximo possível).
+- Se possível, combine os ícones com palavras. As pessoas interpretam mais rapidamente os símbolos do que as letras.
+- Escolha ícones familiares.
+- Utilize o espaçamento.
+- Consistência (não utilize mais que três cores para manter o design clean)
+
+<!---- Imagens ------->
+- Imagens não são decoração, elas são relevantes.
+- Contexto relevante (conteúdo deve andar junto com a imagem).
+- Relevância (deve ser relevante / ter um propósito).
+
+
+Assinale a alternativa que melhor define a ideia de parâmetros de uma função.
+Os parâmetros de uma função são passados durante a chamada da função, podendo cada uma trazer valores de string, inteiro, arrays e entre outros.
+
+Na estrutura HTML você observa o seguinte comando:
+<body onload="carregou()">
+A função "carregou" será chamada assim que a página web for carregada, mas seu conteúdo pode ser diverso.
+
+Assinale a alternativa que melhor define a diferença entre variável global e local.
+A variável local é declarada dentro de uma função, enquanto a variável global é declarada fora da função e pode ser usada dentro da função.
+
+Você está programando a tela de um jogo. Existem 3 opções de personagens para você escolher e eles são de raças diferentes, sendo um humano, um elfo
+<select onchange="mostrarPoderes(this)"><option value="Humano"></option><option value="Elfo"></option><option value="Orc"></option></select>
+
+Se tratando de funções, assinale a alternativa errada:
+Valores podem ser passados para uma função, que retorna uma variável.
+
+Qual o objetivo do evento onChange?
+É disparado quando o valor de um elemento é mudado, como em radiobuttons e checkboxes por exemplo.
+
+
+
+
+

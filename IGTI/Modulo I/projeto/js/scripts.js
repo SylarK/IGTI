@@ -58,6 +58,7 @@ window.addEventListener('load', () => {
 async function fetchUsers() {
   const res = await fetch(
     'https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo'
+    //https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo
   );
   const json = await res.json();
   allUsers = json.results.map((user) => {
@@ -109,7 +110,9 @@ function render() {
     <h6>Estatísticas</h6>
     <p>Sexo masculino: ${countMasc === null ? 0 : countMasc}</p>
     <p>Sexo feminino: ${countFem === null ? 0 : countFem}</p>
-    <p>Soma das idades: ${sumIdades.reduce(reducer)}</p>
+    <p>Soma das idades: ${
+      sumIdades.length > 1 ? sumIdades.reduce(reducer) : 0
+    }</p>
     <p>Média das idades: ${Math.round(medIdades)}</p>
     `;
 
@@ -149,7 +152,6 @@ function render() {
 }
 
 function filterUsers(arr, query) {
-  console.log('filterUser');
   return arr.filter(
     (el) => el.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
