@@ -1,0 +1,45 @@
+Currying: Método de se transformar uma grande função em várias funções menores
+que recebe um retorno.
+
+Hoisting: 
+Levantar ou suspender algo.
+Hoisting de variáveis e funções.
+
+
+Design Patterns: 
+* Padrões de criação: Tornam o sistema independente de como seus objetos são criados, compostos e representados.
+-> Abstract Factory, Builder, Factory Method, Prototype, Singleton
+
+* Padrões estruturais: Forma com que as classes e objetos são compostos
+para formar estruturas maiores.
+-> Adapter, Bridge, Composite, Decorator, Facade, Business Delegate, Flyweight, Proxy
+
+* Padrões comportamentais: Algoritmos e atribuições de responsabilidades entre os objetos.
+-> Chain of Responsability, Command, Interpreter, Iterator, Mediator, Observer,
+State, Strategy, Template Method, Visitor.
+
+(+ utilizados) -> Factory, Singleton, Decorator, Observer, Module
+
+Factory: Todos os objetos que não são chamadas com NEW.
+
+Singleton: Criar uma única instância de uma função construtora e retorná-la
+toda vez em que for necessário utilizá-la.
+
+Decorator: Recebe outra função como parâmetro e estende o seu comportamento 
+sem modifica-lo explicitamente.
+
+Observer: A instância mantém uma coleção de objetos (observers) e notifica
+todos eles quando ocorrem mudanças no estado.
+
+
+[{ nome: "Cris", nota: 10 }, { nome: "Alexandre", nota: 7 }], true, false
+[{salario: 11000}, {salario: 10500}]
+["amora", "laranja", "melancia", "acerola"]
+II e III.
+["melancia", "laranja", "amora", "acerola"]
+frutas.splice(2, 2, "amora");
+
+["Avó Zeca", "Avô Aroldo"], ["Avô Carlos", "Primo João Paulo"] e ["Avó Zeca", "Avô Aroldo", "Avô Carlos", "Primo João Paulo"]
+["Cris", "James", "Jenny", "John"]
+0, 0, 3, "Cris"
+I e III.
