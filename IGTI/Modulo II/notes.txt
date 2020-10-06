@@ -39,3 +39,6 @@ retorna o seu callback.
 
 npm init
 npm init -y 
+npm install nodemon
+
+- Ferramentas para consumo de endpoints -> Insomnia, Postman
