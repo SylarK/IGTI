@@ -3,4 +3,4 @@ function multiplicacao(a,b){
 }
 
 
-module.exports = multiplicacao;
+export default multiplicacao;

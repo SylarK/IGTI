@@ -8,4 +8,4 @@ function subtracao(a,b){
     return a - b;
 }
 
-module.exports = {soma, subtracao, nome};
+export default {soma, subtracao, nome};
