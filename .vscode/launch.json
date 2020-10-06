@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\IGTI\\Modulo II\\cap1\\index.js",
+            "program": "${workspaceFolder}\\IGTI\\Modulo II\\cap2\\desafio01\\index.js",
             "args": ["100"]
         }
     ]
