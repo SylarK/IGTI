@@ -36,6 +36,9 @@ retorna o seu callback.
 -- ESModules : import
 (Modulos nativos: File System / Readline / Events / HTTP)
 
+** NODE.JS -> EXPRESS
+-- Framework utilizado na área de desenvolvimento voltado a APIs.
+
 
 npm init
 npm init -y 
