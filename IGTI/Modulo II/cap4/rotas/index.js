@@ -36,6 +36,56 @@ app.get('/testParam/:id/:a?', (req, res) => {
   res.send('ID digitado : ' + req.params.id + ' - ' + req.params.a);
 });
 
+/* Parametros via query */
+
+app.get('/testeQuery', (req, res) => {
+  res.send(req.query);
+});
+
+/* Next   */
+
+app.get(
+  '/testMultipleHandlers',
+  (req, res, next) => {
+    console.log('Callback - I');
+    next();
+  },
+  (req, res) => {
+    console.log('Callback - II');
+    res.send('Finalizado');
+    //res.end();
+  }
+);
+
+/* Next com Array */
+
+const callback1 = (req, res, next) => {
+  console.log('Callback - I');
+  next();
+};
+
+const callback2 = (req, res, next) => {
+  console.log('Callback - II');
+  next();
+};
+
+function callback3(req, res, next) {
+  console.log('Callback - III');
+  next();
+}
+
+function callback4(req, res) {
+  console.log('Callback - IV');
+  res.send('Finalizado');
+}
+
+app.get('/testMultipleHandlersArray', [
+  callback1,
+  callback2,
+  callback3,
+  callback4,
+]);
+
 app.listen(3000, () => {
   console.log('API Started! ');
 });
