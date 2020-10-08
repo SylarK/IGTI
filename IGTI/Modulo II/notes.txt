@@ -39,6 +39,10 @@ retorna o seu callback.
 ** NODE.JS -> EXPRESS
 -- Framework utilizado na área de desenvolvimento voltado a APIs.
 
+** NODE.JS -> MIDDLEWARES
+-- Obj de solicitação, Obj de resposta, Próxima função no ciclo
+(req, res, next)
+
 
 npm init
 npm init -y 
