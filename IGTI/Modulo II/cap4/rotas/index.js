@@ -86,6 +86,22 @@ app.get('/testMultipleHandlersArray', [
   callback4,
 ]);
 
+/* Route */
+// A diferença do Route para o All é que no route eu escolho quais requisições entram
+
+app
+  .route('/testRoute')
+  .get((req, res) => {
+    res.send(req.method);
+  })
+  .post((req, res) => {
+    res.send(req.method);
+    console.log(req.body);
+  })
+  .delete((req, res) => {
+    res.send(req.method);
+  });
+
 app.listen(3000, () => {
   console.log('API Started! ');
 });
