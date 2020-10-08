@@ -43,6 +43,13 @@ retorna o seu callback.
 -- Obj de solicitação, Obj de resposta, Próxima função no ciclo
 (req, res, next)
 
+** NODE.JS -> Gravação de LOGS
+-- Uma funcionalidade extremamente importante é a de gravação dos logs.
+(para controle de erros, dados, históricos, etc.)
+-- Aplicação mais utilizada no NODE.JS : Winston 
+----> Permite a configuração de formatos de log.
+----> Suporta 7 níveis de log.
+
 
 npm init
 npm init -y 
