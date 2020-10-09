@@ -38,6 +38,7 @@ retorna o seu callback.
 
 ** NODE.JS -> EXPRESS
 -- Framework utilizado na área de desenvolvimento voltado a APIs.
+-- Permite que sejam servidor arquivos estáticos (express.static)
 
 ** NODE.JS -> MIDDLEWARES
 -- Obj de solicitação, Obj de resposta, Próxima função no ciclo
