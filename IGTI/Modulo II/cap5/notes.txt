@@ -1,0 +1,11 @@
+==============> Criação de API <==============
+
+account 
+- id
+- name
+- balance
+
+- criação, depósito, saque, saldo e exclusão
+
+
+
