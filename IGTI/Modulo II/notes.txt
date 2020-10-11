@@ -51,6 +51,11 @@ retorna o seu callback.
 ----> Permite a configuração de formatos de log.
 ----> Suporta 7 níveis de log.
 
+** CORS 
+-- npm install cors
+
+** SWAGGER
+-- npm install swagger-ui-express
 
 npm init
 npm init -y 
