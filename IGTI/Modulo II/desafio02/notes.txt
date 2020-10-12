@@ -1,0 +1,8 @@
+[ GRADE ]
+
+- id (int)
+- student (string)
+- subject (string)
+- type (string)
+- value (float)
+- timestamp
