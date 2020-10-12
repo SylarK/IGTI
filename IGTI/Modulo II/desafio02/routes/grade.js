@@ -1,4 +1,3 @@
-import { timeStamp } from 'console';
 import express from 'express';
 import { promises as fs } from 'fs';
 
@@ -6,11 +5,16 @@ const { readFile, writeFile } = fs;
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('<h1>GRADE / GET</h1>');
+router.get('/', async (req, res, next) => {
+  try {
+    res.send('Tudo funcionando bem! Method: ' + req.method);
+  } catch (err) {
+    next(err);
+  }
 });
 
-router.post('/', async (req, res) => {
+// 1
+router.post('/', async (req, res, next) => {
   try {
     let grade = req.body;
 
@@ -22,17 +26,22 @@ router.post('/', async (req, res) => {
       subject: grade.subject,
       type: grade.type,
       value: grade.value,
+      timestamp: new Date(),
     };
 
     data.grades.push(grade);
 
-    console.log(data);
-    //await writeFile(global.filename, JSON.stringify(data));
-    //res.send(data);
-    res.end();
+    await writeFile(global.filename, JSON.stringify(data, null, 2));
+
+    res.send(grade);
   } catch (err) {
-    console.log('Erro -> ' + err.message);
+    next(err);
   }
+});
+
+router.use((err, req, res, next) => {
+  global.logger.error(`Lucas, something is wrong: ${err.message}`);
+  res.status(400).send({ error: err.message });
 });
 
 export default router;
