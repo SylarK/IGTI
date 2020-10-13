@@ -36,5 +36,5 @@ app.use(express.json());
 app.use('/grade', routerGrade);
 
 app.listen(3000, () => {
-  console.log('API Started...');
+  global.logger.info('API Started...');
 });
