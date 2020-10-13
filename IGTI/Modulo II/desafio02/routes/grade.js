@@ -112,10 +112,10 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // 5
-router.get('/:student/:subject', async (req, res, next) => {
+router.get('/5/:student/:subject', async (req, res, next) => {
   try {
     const data = JSON.parse(await readFile(global.filename));
-    let find = data.grades.filter(
+    const find = data.grades.filter(
       (grade) =>
         grade.student == req.params.student &&
         grade.subject == req.params.subject
@@ -125,17 +125,40 @@ router.get('/:student/:subject', async (req, res, next) => {
     for (const [id, grade] of Object.entries(find)) {
       sum += grade.value;
     }
+    console.log(`Soma dos elementos : ${sum}`);
     */
-    //console.log(`Soma dos elementos : ${sum}`);
-    let initialValue = 0;
+
     let sum = find.reduce((accumulator, grade) => {
       return accumulator + grade.value;
-    }, initialValue);
+    }, 0);
 
     console.log(sum);
     res.send(
       `A soma das notas em ${req.params.subject} para o aluno ${req.params.student} é igual a ${sum}.`
     );
+  } catch (err) {
+    next(err);
+  }
+});
+
+// 6
+router.get('/6/:subject/:type', async (req, res, next) => {
+  try {
+    const data = JSON.parse(await readFile(global.filename));
+
+    const find = data.grades.filter(
+      (grade) =>
+        grade.subject === req.params.subject && grade.type === req.params.type
+    );
+
+    let media = find.reduce((accumulator, grade) => {
+      return accumulator + grade.value;
+    }, 0);
+    media = media / find.length;
+
+    console.log(`Média : ${media}`);
+    res.send(`A média das notas na materia ${req.params.subject} dentro do tópico ${req.params.type} é igual 
+    a ${media}`);
   } catch (err) {
     next(err);
   }
