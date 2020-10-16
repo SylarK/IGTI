@@ -164,6 +164,25 @@ router.get('/6/:subject/:type', async (req, res, next) => {
   }
 });
 
+// 7
+router.get('/7/:subject/:type', async (req, res, next) => {
+  try {
+    const data = JSON.parse(await readFile(global.filename));
+
+    const find = data.grades.filter(
+      (grade) =>
+        grade.subject === req.params.subject && grade.type === req.params.type
+    );
+
+    find.sort(function (a, b) {
+      return a.value > b.value ? -1 : a.value < b.value ? 1 : 0;
+    });
+
+    res.send(find);
+  } catch (err) {
+    next(err);
+  }
+});
 router.use((err, req, res, next) => {
   global.logger.error(`Lucas, something is wrong: ${err.message}`);
   res.status(400).send({ error: err.message });
