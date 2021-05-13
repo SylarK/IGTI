@@ -1,2 +1,0 @@
-Hello, I am using a promisse with async / await
-This is a new line in the txt
