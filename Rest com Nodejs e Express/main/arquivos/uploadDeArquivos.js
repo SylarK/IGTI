@@ -1,19 +1,20 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 module.exports = (caminho, nomeDoArquivo, callbackImg) => {
-  const tipo = path.extname(caminho);
-  const novoCaminho = `./assets/imagens/${nomeDoArquivo}${tipo}`;
+  const tipo = path.extname(caminho)
 
-  const tiposValidos = ['jpg', 'png', 'jpeg'];
-  const tipoEhValido = tiposValidos.indexOf(tipo.substring(1));
+  const tiposValidos = ['jpg', 'png', 'jpeg']
+  const tipoEhValido = tiposValidos.indexOf(tipo.substring(1)) !== -1
 
-  if (tipoEhValido == -1) {
-    console.log('Erro! Tipo de arquivo inválido.');
-    res.status(400).send('Tipo de arquivo anexado e invalido.');
-  } else {
+  if (tipoEhValido) {
+    const novoCaminho = `./assets/imagens/${nomeDoArquivo}${tipo}`
     fs.createReadStream(caminho)
       .pipe(fs.createWriteStream(novoCaminho))
-      .on('finish', () => callbackImg(novoCaminho));
+      .on('finish', () => callbackImg(false, novoCaminho))
+  } else {
+    const erro = 'Tipo é inválido'
+    console.log('Erro, tipo é inválido!')
+    callbackImg(erro)
   }
-};
+}
