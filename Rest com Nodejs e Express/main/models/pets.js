@@ -1,5 +1,5 @@
 const conexao = require('../config/customDB')
-const uploadDeArquivo = require('../arquivos/uploadDeArquivos')
+const uploadDeArquivo = require('../infra/arquivos/uploadDeArquivos')
 
 class Pet {
   sendPet(pet, res) {
