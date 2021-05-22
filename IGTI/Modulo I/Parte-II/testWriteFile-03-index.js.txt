@@ -1,0 +1,1 @@
+Teste escrito utilizando promisses no arquivo 03-index.js

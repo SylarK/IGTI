@@ -1,0 +1,4 @@
+Texto escrito utilizado Write File no 02-index.js
+Linha escrita utilizando appendFile
+
+Append dentro da promisse

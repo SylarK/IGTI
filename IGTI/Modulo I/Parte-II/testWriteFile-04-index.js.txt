@@ -1,0 +1,2 @@
+Teste utilizando promises assíncronas com try catch.
+Append texto em arquivo 04-index.js
