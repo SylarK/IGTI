@@ -9,3 +9,6 @@ O que foi visto nesta parte?
 - Parametros na rota e via query
 - Expressões regulares
 - Next e route
+- Gravação de logs
+- Tratamento de erros
+- Servindo arquivos estáticos

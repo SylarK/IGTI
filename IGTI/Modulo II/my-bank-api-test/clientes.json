@@ -1,0 +1,47 @@
+{
+  "nextId": 10,
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Paulo Rocha",
+      "status": "active",
+      "age": "26",
+      "cpf": "659.656.785-99"
+    },
+    {
+      "id": 2,
+      "name": "Gabriel Arroz",
+      "status": "active",
+      "age": "35",
+      "cpf": "456.986.665-99"
+    },
+    {
+      "id": 3,
+      "name": "Yanael Juiz",
+      "status": "active",
+      "age": "42",
+      "cpf": "456.632.655-55"
+    },
+    {
+      "id": 4,
+      "name": "Lucas Carron",
+      "status": "active",
+      "age": "25",
+      "cpf": "996.956.223-56"
+    },
+    {
+      "id": 5,
+      "name": "Amanda Luz",
+      "status": "active",
+      "age": "31",
+      "cpf": "546.659.976-98"
+    },
+    {
+      "id": 9,
+      "name": "Jefferson Carlos",
+      "status": "active",
+      "age": "43",
+      "cpf": "456.986.333-65"
+    }
+  ]
+}

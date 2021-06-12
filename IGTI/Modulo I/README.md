@@ -1,0 +1,22 @@
+## Conteúdo Módulo I
+
+- Backend x Frontend
+- APIs - visão geral e teórica
+- Nodejs - visão gera e teórica
+- Hello World e debug no Nodejs
+- Nodejs e EventLoop
+- Módulos do NodeJS
+- Ferramentas para consumo de endpoints
+- Entradas de usuário
+- Manipulação JSON
+- Eventos (eventEmitter)
+- Frameworks
+- Instalação e utilização Express
+- Rotas
+- Middlewares
+- Parametros na rota e via query
+- Expressões regulares
+- Next e route
+- Gravação de logs
+- Tratamento de erros
+- Servindo arquivos estáticos

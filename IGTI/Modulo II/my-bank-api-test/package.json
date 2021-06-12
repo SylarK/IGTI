@@ -1,16 +1,17 @@
 {
-  "name": "Parte-III",
+  "name": "my-bank-api-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Lucas Amado",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
     "winston": "^3.3.3"
   },
   "type": "module"
