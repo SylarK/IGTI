@@ -27,3 +27,13 @@
 - Header: Tipo de token, algoritmo utilizado (transforma base64).
 - Payload: Reserved claims, public claims, private claims (transforma base64).
 - Signature: Concatenação dos hashes usando a base64UrlEncode com uma chave secreta.
+
+#### Criptografia
+
+- É a ciência e a arte de manter mensagens seguras.
+- Texto claro ---> Cifragem ----> Texto Cifrado ----> Decifragem ----> Texto claro 
+- Composição Chave simétrica (mono e poli)
+(Texto -> Algoritmo de criptografia -> Chave secreta -> Texto cifrado -> Algoritmo de decriptografia)
+- Diffie-Hellman (chave simétrica)
+- Chave assimétrica
+
